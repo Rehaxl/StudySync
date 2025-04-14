@@ -6,11 +6,20 @@ connectToMongo();
 const port = 5000 || process.env.PORT;
 // var cors = require("cors");
 const cors = require('cors');
-const aiRoutes = require('./routes/ai');
+
+const allowedOrigins = [
+  'http://localhost:3000', // for local testing
+  'https://apcoer-it-studsync-1.onrender.com' // your deployed frontend
+];
 
 app.use(cors({
-  origin: process.env.FRONTEND_API_LINK
+  origin: [
+    "https://apcoer-it-studsync.onrender.com",      // allow main frontend
+    "https://apcoer-it-studsync-1.onrender.com"      // allow deployed frontend
+  ],
+  credentials: true
 }));
+
 
 app.use(express.json()); //to convert request data to json
 
@@ -37,7 +46,7 @@ app.use("/api/subject", require("./routes/Other Api/subject.route"));
 app.use("/api/marks", require("./routes/Other Api/marks.route"));
 app.use("/api/branch", require("./routes/Other Api/branch.route"));
 
-app.use(cors());
+
 app.use('/api/ai', aiRoutes);
 
 app.listen(port, () => {
