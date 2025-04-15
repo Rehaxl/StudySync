@@ -1,3 +1,4 @@
+// require('dotenv').config();
 const connectToMongo = require("./Database/db");
 const express = require("express");
 const app = express();
@@ -26,7 +27,7 @@ app.use(express.json()); // to convert request data to json
 
 // Basic route to check if server is working
 app.get("/", (req, res) => {
-  res.send("Hello 👋 I am Working Fine 🚀");
+  res.send("Hello  I am Working Fine ");
 });
 
 app.use('/media', express.static(path.join(__dirname, 'media')));
