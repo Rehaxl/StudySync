@@ -9,7 +9,6 @@ const seedData = async () => {
 
         await adminCredential.deleteMany({})
         await adminDetails.deleteMany({})
-
         await adminCredential.create({
             loginid: 123456,
             password: "admin123"
