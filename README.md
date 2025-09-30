@@ -1,13 +1,12 @@
 # College Management System with Job Recommendation
 
-![Main Page](./screenshots/j - 1.png)
+![Main Page](./screenshots/first.png)
 
 ## Description
-Project Name - StudySync Student Repo and job recommendation system.
 
 A comprehensive MERN stack application for managing college operations, including user management, academic resources, and administrative tasks. Additionally, it features a job recommendation system where users can upload their resume in PDF format. The system extracts skills from the resume, scrapes job listings from websites like Remotive and others, stores the data in MongoDB Atlas cloud database, and recommends jobs based on skill matching using TF-IDF algorithm.
 
-![Skills Extraction](./screenshots/j - 2 ( skills extraction).png)
+![Skills Extraction](./screenshots/skillsextraction.png)
 
 ## Features
 
@@ -26,11 +25,11 @@ A comprehensive MERN stack application for managing college operations, includin
 - Job Recommendations Based on TF-IDF Skill Matching
 - User-Friendly Interface for Viewing Recommendations
 
-![Job Recommendations](./screenshots/j - 3 extracted jobs.png)
+![Job Recommendations](./screenshots/extractedjobs.png)
 
-![Faculty Dashboard](./screenshots/cms - faculty (1).png)
+![Faculty Dashboard](./screenshots/cmsfaculty.png)
 
-![Material Management](./screenshots/cms - material (1).png)
+![Material Management](./screenshots/cmsmaterial.png)
 
 ## Tech Stack
 
@@ -87,6 +86,30 @@ A comprehensive MERN stack application for managing college operations, includin
 - **College Management:** Login with Admin, Faculty, or Student credentials to access respective dashboards for managing or viewing academic data.
 - **Job Recommendation:** Upload your resume in PDF format. The system will extract skills, scrape job listings, and display recommended jobs based on skill matching.
 
+## API Endpoints
+
+### College Management APIs
+- Authentication:
+  - `/api/admin/auth`
+  - `/api/faculty/auth`
+  - `/api/student/auth`
+- Details Management:
+  - `/api/admin/details`
+  - `/api/faculty/details`
+  - `/api/student/details`
+- Other Resources:
+  - `/api/timetable`
+  - `/api/material`
+  - `/api/notice`
+  - `/api/subject`
+  - `/api/marks`
+  - `/api/branch`
+
+### Job Recommendation APIs
+- `/upload` - Upload PDF resume and extract skills
+- `/scrape` - Scrape job listings from websites
+- `/recommend` - Get job recommendations based on skills
+- `/jobs` - Retrieve stored job data
 
 ## Deployment
 
